@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch"/>
+    <node pkg="turtlebot_applications" type="turtle_orientation.py" name="turtle_orientation" output="screen"/>
+</launch>

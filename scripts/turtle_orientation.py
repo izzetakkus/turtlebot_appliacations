@@ -22,7 +22,6 @@ class Turtlebot3():
         self.pose_subscriber = rospy.Subscriber('/odom',Odometry, self.odom_callback)
         rospy.spin()
         
-    
     def odom_callback(self,msg):
         global x,y,z,roll,pitch,yaw
         (x,y,z) = [msg.pose.pose.position.x,msg.pose.pose.position.y,msg.pose.pose.position.z]
@@ -33,7 +32,6 @@ class Turtlebot3():
         print("\nx = %.2f  y= %.2d z = %.2f"%(x, y, z))
 
 Turtlebot3()
-
 
     
 
